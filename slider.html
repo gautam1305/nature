@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    <title>image slider</title>
+    <script>
+        function f(){
+            document.getElementById('photo1').style.display='block';
+            document.getElementById('photo2').style.display='none';
+            document.getElementById('photo3').style.display='none';
+            document.getElementById('photo4').style.display='none';
+        }
+        function g(){
+            document.getElementById('photo2').style.display='block';
+            document.getElementById('photo1').style.display='none';
+             document.getElementById('photo3').style.display='none';
+             document.getElementById('photo4').style.display='none';
+        }
+        function h(){
+            document.getElementById('photo3').style.display='block';
+            document.getElementById('photo1').style.display='none';
+            document.getElementById('photo2').style.display='none';
+            document.getElementById('photo4').style.display='none';
+            
+        }
+        function i(){
+            document.getElementById('photo3').style.display='none';
+            document.getElementById('photo1').style.display='none';
+            document.getElementById('photo2').style.display='none';
+            document.getElementById('photo4').style.display='block';
+            
+        }
+    </script>
+    <style>
+        .content{
+            width:100%;
+            height: 600px;
+        }
+        .buttonss{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+        }
+        .images{
+            width: 100%;
+            height:600px;
+            position: absolute;
+        }
+        .images img{
+            width: 100%;
+            height:600px; 
+        }
+        #photo3,#photo2,#photo4{
+            display: none;
+        }
+        #b1,#b2,#b3,#b4{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+        
+    </style>
+    </head>
+    <body>
+        <div class="content">
+        <div class="images">
+            <img src="resources/css/logo.jpg" alt="1" id="photo1">
+            <img src="resources/css/logo1.png" alt="2" id="photo2">
+            <img src="resources/css/nature.jpg" alt="3" id="photo3">
+            <img src="vendor/images/nature2.jpeg" alt="3" id="photo4">
+        </div>
+        <div class="buttonss">
+            <button id="b1" onclick="f()"></button>
+            <button id="b2" onclick="g()"></button>
+            <button id="b3" onclick="h()"></button>
+            <button id="b4" onclick="i()"></button>
+        </div>
+        </div>
+    </body>
+</html>
